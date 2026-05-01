@@ -44,7 +44,7 @@ export default function ContactPage() {
           data-scroll-animate
           style={{
             backgroundImage:
-              'linear-gradient(rgba(10, 16, 10, 0.52), rgba(10, 16, 10, 0.52)), url("/images/mango-pickle.jpg")',
+              'linear-gradient(rgba(10, 16, 10, 0.52), rgba(10, 16, 10, 0.52)), url("https://picsum.photos/id/433/1920/1080")',
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

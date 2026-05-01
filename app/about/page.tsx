@@ -14,7 +14,7 @@ export default function AboutPage() {
           data-scroll-animate
           style={{
             backgroundImage:
-              'linear-gradient(rgba(16, 10, 6, 0.55), rgba(16, 10, 6, 0.55)), url("/images/coriander.jpg")',
+              'linear-gradient(rgba(16, 10, 6, 0.55), rgba(16, 10, 6, 0.55)), url("https://picsum.photos/id/1080/1920/1080")',
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

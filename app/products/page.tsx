@@ -39,20 +39,68 @@ const categories = [
 ]
 
 const categoryHeroImages: Record<string, string> = {
-  All: "/images/mixture.jpg",
-  Spices: "/images/garam-masala.jpg",
-  Rice: "/images/basmati.jpg",
-  "Rice & Grains": "/images/basmati.jpg",
-  Dairy: "/images/kaju-katli.jpg",
-  "Dal & Pulses": "/images/toor-dal.jpg",
-  Snacks: "/images/murukku.jpg",
-  Beverages: "/images/chai.jpg",
-  Sweets: "/images/gulab-jamun.jpg",
-  "Ready to Cook": "/images/paneer-masala.jpg",
-  Pickles: "/images/mango-pickle.jpg",
-  Flour: "/images/atta.jpg",
-  Vegetables: "/images/coriander.jpg",
-  Fruits: "/images/mango-pulp.jpg",
+  All: "https://picsum.photos/id/425/1920/1080",
+  Spices: "https://picsum.photos/id/431/1920/1080",
+  Rice: "https://picsum.photos/id/1074/1920/1080",
+  "Rice & Grains": "https://picsum.photos/id/102/1920/1080",
+  Dairy: "https://picsum.photos/id/490/1920/1080",
+  "Dal & Pulses": "https://picsum.photos/id/766/1920/1080",
+  Snacks: "https://picsum.photos/id/488/1920/1080",
+  Beverages: "https://picsum.photos/id/577/1920/1080",
+  Sweets: "https://picsum.photos/id/1084/1920/1080",
+  "Ready to Cook": "https://picsum.photos/id/312/1920/1080",
+  Pickles: "https://picsum.photos/id/824/1920/1080",
+  Flour: "https://picsum.photos/id/839/1920/1080",
+  Vegetables: "https://picsum.photos/id/103/1920/1080",
+  Fruits: "https://picsum.photos/id/1080/1920/1080",
+}
+
+const searchCategoryKeywords: Record<string, string[]> = {
+  "Dal & Pulses": [
+    "toor dal",
+    "arhar dal",
+    "chana dal",
+    "kala chana",
+    "kabuli chana",
+    "moong dal",
+    "sabut moong",
+    "urad dal",
+    "sabut urad",
+    "masoor dal",
+    "matar dal",
+    "rajma",
+    "lobia",
+    "matki",
+    "kulthi",
+    "val dal",
+    "rongi",
+    "desi chana",
+    "soyabean",
+    "dry peas",
+  ],
+  Rice: ["basmati rice", "sona masoori", "ponni rice", "jeera rice", "brown rice", "idli rice", "rice"],
+  Spices: ["turmeric", "red chilli", "garam masala", "cumin", "coriander", "mustard", "fenugreek", "spice"],
+  Flour: ["atta", "wheat flour", "besan", "gram flour", "maida", "rava", "sooji", "rice flour", "ragi flour", "flour"],
+  Snacks: ["mixture", "chakli", "murukku", "bhujia", "sev", "chips", "mathri", "snack"],
+  Sweets: ["gulab jamun", "jalebi", "kaju katli", "rasgulla", "barfi", "ladoo", "halwa mix", "sweet"],
+  Beverages: ["masala chai", "green tea", "rooh afza", "mango pulp", "lassi", "sherbet", "coffee", "beverage"],
+  Pickles: ["mango pickle", "lime pickle", "mixed pickle", "garlic pickle", "chilli pickle", "ginger pickle", "pickle"],
+  "Ready to Cook": ["biryani masala", "paneer masala", "curry paste", "sambar powder", "rasam powder", "pav bhaji masala", "ready to cook"],
+  Vegetables: ["fresh coriander", "curry leaves", "green chillies", "ginger", "garlic", "onions", "tomatoes", "vegetable"],
+  Fruits: ["alphonso mango", "banana", "coconut", "papaya", "guava", "pomegranate", "chikoo", "fruit"],
+  Dairy: ["paneer", "ghee", "curd", "yogurt", "buttermilk", "khoya", "cream", "milk", "dairy"],
+}
+
+function inferCategoryFromSearch(searchTerm: string): string | null {
+  const normalized = searchTerm.trim().toLowerCase()
+  if (!normalized) return null
+
+  for (const [category, keywords] of Object.entries(searchCategoryKeywords)) {
+    if (keywords.some((keyword) => normalized.includes(keyword))) {
+      return category
+    }
+  }
+  return null
 }
 
 function ProductsContent() {
@@ -121,6 +169,15 @@ function ProductsContent() {
     setSortBy("name")
   }
 
+  const inferredSearchCategory = selectedCategory === "All" ? inferCategoryFromSearch(searchQuery) : null
+  const heroCategory = selectedCategory !== "All" ? selectedCategory : inferredSearchCategory ?? "All"
+  const heroTitle =
+    selectedCategory !== "All"
+      ? tc(selectedCategory)
+      : searchQuery.trim()
+        ? `${t("header.allProducts")} - ${searchQuery}`
+        : t("header.allProducts")
+
   const FilterContent = () => (
     <div className="space-y-6">
       <div>
@@ -180,9 +237,9 @@ function ProductsContent() {
       <Header />
       <main className="flex-1">
         <PageHero
-          title={selectedCategory === "All" ? t("header.allProducts") : tc(selectedCategory)}
+          title={heroTitle}
           subtitle={t("products.heroSubtitle")}
-          image={categoryHeroImages[selectedCategory] ?? categoryHeroImages.All}
+          image={categoryHeroImages[heroCategory] ?? categoryHeroImages.All}
         />
         <div className="container mx-auto px-4 py-8" data-scroll-animate>
         {/* Page Header */}

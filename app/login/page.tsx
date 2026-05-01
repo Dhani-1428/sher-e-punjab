@@ -85,7 +85,15 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/10 flex flex-col">
+    <div
+      className="min-h-screen flex flex-col"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url("https://picsum.photos/id/1067/1920/1080")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Header />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-14" data-scroll-animate>
