@@ -63,7 +63,7 @@ export default function CartPage() {
         <PageHero
           title="Shopping Cart"
           subtitle="Review your selected products and complete your order."
-          image="/images/basmati.jpg"
+            image="/images/chana-dal.jpg"
         />
         <div className="container mx-auto px-4 py-8" data-scroll-animate>
         <h1 className="text-3xl font-bold text-foreground mb-8" data-scroll-animate>Shopping Cart</h1>

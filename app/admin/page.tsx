@@ -283,7 +283,7 @@ export default function AdminPage() {
         <PageHero
           title="Admin Dashboard"
           subtitle="Manage orders, products, and store operations from one place."
-          image="/images/coriander.jpg"
+          image="/images/chilli.jpg"
         />
         <div className="container mx-auto px-4 py-8" data-scroll-animate>
         {/* Stats Cards */}

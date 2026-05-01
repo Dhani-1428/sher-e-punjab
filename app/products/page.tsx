@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation"
 import { useState, useMemo, useEffect, Suspense } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { PageHero } from "@/components/page-hero"
 import { ProductCard } from "@/components/product-card"
 import { useStore } from "@/lib/store-context"
 import { useI18n } from "@/lib/i18n"
@@ -178,19 +179,11 @@ function ProductsContent() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative flex justify-center overflow-hidden bg-transparent" data-scroll-animate>
-          <video
-            className="block h-auto w-full max-h-[calc(100vh-5rem)] object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          >
-            <source src="/videos/video_preview_h264.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </section>
+        <PageHero
+          title={selectedCategory === "All" ? t("header.allProducts") : tc(selectedCategory)}
+          subtitle={t("products.heroSubtitle")}
+          image={categoryHeroImages[selectedCategory] ?? categoryHeroImages.All}
+        />
         <div className="container mx-auto px-4 py-8" data-scroll-animate>
         {/* Page Header */}
         <div className="mb-8" data-scroll-animate>
