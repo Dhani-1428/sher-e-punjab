@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { useStore, type CustomerInfo } from "@/lib/store-context"
 import { useI18n } from "@/lib/i18n"
+import { getProductImageByName } from "@/lib/product-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -285,7 +286,7 @@ export default function CheckoutPage() {
                       <div key={item.product.id} className="flex gap-3">
                         <div className="relative w-12 h-12 rounded overflow-hidden bg-muted shrink-0">
                           <Image
-                            src={item.product.image}
+                            src={getProductImageByName(item.product.name, item.product.category)}
                             alt={tp(item.product.name)}
                             fill
                             className="object-cover"

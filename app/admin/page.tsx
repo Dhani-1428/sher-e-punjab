@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import { useStore, type Order, type Product } from "@/lib/store-context"
 import { PageHero } from "@/components/page-hero"
 import { useI18n } from "@/lib/i18n"
+import { getProductImageByName } from "@/lib/product-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -711,7 +712,7 @@ export default function AdminPage() {
                               <div className="h-12 w-12 rounded-md overflow-hidden bg-muted relative">
                                 {product.image ? (
                                   <Image
-                                    src={product.image}
+                                    src={getProductImageByName(product.name, product.category)}
                                     alt={product.name}
                                     fill
                                     className="object-cover"

@@ -252,7 +252,7 @@ export function Header() {
             onMouseLeave={() => setActiveCategory(null)}
           >
             <Link
-              href="/products"
+              href="/products?category=All"
               className="px-3 py-3 text-sm font-medium hover:text-primary hover:bg-primary/10 transition-colors"
             >
               {t("header.allProducts")}
@@ -318,7 +318,7 @@ export function Header() {
               {t("header.home")}
             </Link>
             <Link
-              href="/products"
+              href="/products?category=All"
               className="block py-2 text-sm font-medium hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >

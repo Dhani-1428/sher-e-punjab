@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { useStore, weightOptions } from "@/lib/store-context"
 import { useI18n } from "@/lib/i18n"
+import { getProductImageByName } from "@/lib/product-images"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -27,6 +28,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   const [selectedWeight, setSelectedWeight] = useState("500g")
   const [quantity, setQuantity] = useState(1)
   const [isAdded, setIsAdded] = useState(false)
+
+  const productImage = product ? getProductImageByName(product.name, product.category) : ""
   
   if (!product) {
     return (
@@ -78,7 +81,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         <PageHero
           title={tp(product.name)}
           subtitle={`Explore details, pricing, and order options for ${tp(product.name)}.`}
-          image={product.image}
+          image={productImage}
         />
         <div className="container mx-auto px-4 py-8">
           {/* Breadcrumb */}
@@ -105,7 +108,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             {/* Product Image */}
             <div className="relative aspect-square rounded-xl overflow-hidden bg-muted group">
               <Image
-                src={product.image}
+                src={productImage}
                 alt={tp(product.name)}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
