@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { PageHero } from "@/components/page-hero"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -39,11 +39,34 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <PageHero
-          title="Contact Us"
-          subtitle="Have questions? We would love to hear from you. Send us a message and we will respond as soon as possible."
-          image="/images/mango-pickle.jpg"
-        />
+        <section
+          className="relative overflow-hidden py-16 md:py-24"
+          data-scroll-animate
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(10, 16, 10, 0.52), rgba(10, 16, 10, 0.52)), url("/images/mango-pickle.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto rounded-2xl border border-white/30 bg-white/15 backdrop-blur-sm px-6 py-10 md:px-10 md:py-12 text-center">
+              <p className="text-white/85 text-sm tracking-wide uppercase">We are here to help</p>
+              <h1 className="mt-2 text-3xl md:text-5xl font-bold text-white">Contact Us</h1>
+              <p className="mt-4 text-white/90 max-w-3xl mx-auto">
+                Have questions? Send us a message and our team will respond as soon as possible.
+              </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <a href="tel:+351XXXXXXXXX" className="inline-flex rounded-full bg-white text-foreground px-5 py-2.5 text-sm font-medium">
+                  Call Store
+                </a>
+                <Link href="/products" className="inline-flex rounded-full border border-white text-white px-5 py-2.5 text-sm font-medium">
+                  Browse Products
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         <section className="py-16" data-scroll-animate>
           <div className="container mx-auto px-4" data-scroll-animate>

@@ -4,7 +4,8 @@ import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useStore } from "@/lib/store-context"
-import { PageHero } from "@/components/page-hero"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -84,14 +85,11 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/10">
-      <PageHero
-        title={isLogin ? "Welcome Back" : "Create Account"}
-        subtitle={isLogin ? "Sign in to continue shopping and checkout faster." : "Create your account to save details and place orders quickly."}
-        image="/images/chai.jpg"
-      />
-      <div className="container mx-auto px-4 pb-14" data-scroll-animate>
-        <div className="w-full max-w-md mx-auto" data-scroll-animate>
+    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/10 flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <div className="container mx-auto px-4 py-14" data-scroll-animate>
+          <div className="w-full max-w-md mx-auto" data-scroll-animate>
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6 transition-colors">
             <ArrowLeft className="h-4 w-4" />
             Back to Store
@@ -280,7 +278,9 @@ export default function LoginPage() {
           </CardContent>
           </Card>
         </div>
+        </div>
+      </main>
+      <Footer />
       </div>
-    </div>
   )
 }

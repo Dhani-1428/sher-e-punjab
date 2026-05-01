@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { PageHero } from "@/components/page-hero"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, Heart, Award, Globe } from "lucide-react"
 
@@ -9,11 +9,34 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <PageHero
-          title="About SHER-E-PUNJAB"
-          subtitle="Bringing the authentic taste of India to Lisbon since 2019. We are passionate about connecting the Indian community and food lovers with premium quality groceries and products."
-          image="/images/coriander.jpg"
-        />
+        <section
+          className="relative overflow-hidden py-16 md:py-24"
+          data-scroll-animate
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(16, 10, 6, 0.55), rgba(16, 10, 6, 0.55)), url("/images/coriander.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto rounded-2xl border border-white/30 bg-white/15 backdrop-blur-sm px-6 py-10 md:px-10 md:py-12 text-center">
+              <p className="text-white/85 text-sm tracking-wide uppercase">Our Journey</p>
+              <h1 className="mt-2 text-3xl md:text-5xl font-bold text-white">About SHER-E-PUNJAB</h1>
+              <p className="mt-4 text-white/90 max-w-3xl mx-auto">
+                Bringing the authentic taste of India to Lisbon since 2019. We connect the Indian community and food lovers with premium quality groceries and trusted products.
+              </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <Link href="/products" className="inline-flex rounded-full bg-white text-foreground px-5 py-2.5 text-sm font-medium">
+                  Explore Products
+                </Link>
+                <Link href="/contact" className="inline-flex rounded-full border border-white text-white px-5 py-2.5 text-sm font-medium">
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* Our Story */}
         <section className="py-16" data-scroll-animate>

@@ -23,6 +23,7 @@ import {
 const categories = [
   "All",
   "Spices",
+  "Rice",
   "Rice & Grains",
   "Dairy",
   "Dal & Pulses",
@@ -32,20 +33,25 @@ const categories = [
   "Ready to Cook",
   "Pickles",
   "Flour",
+  "Vegetables",
+  "Fruits",
 ]
 
 const categoryHeroImages: Record<string, string> = {
   All: "/images/mixture.jpg",
   Spices: "/images/garam-masala.jpg",
+  Rice: "/images/basmati.jpg",
   "Rice & Grains": "/images/basmati.jpg",
-  Dairy: "/images/paneer-masala.jpg",
+  Dairy: "/images/kaju-katli.jpg",
   "Dal & Pulses": "/images/toor-dal.jpg",
   Snacks: "/images/murukku.jpg",
   Beverages: "/images/chai.jpg",
   Sweets: "/images/gulab-jamun.jpg",
-  "Ready to Cook": "/images/biryani-masala.jpg",
+  "Ready to Cook": "/images/paneer-masala.jpg",
   Pickles: "/images/mango-pickle.jpg",
   Flour: "/images/atta.jpg",
+  Vegetables: "/images/coriander.jpg",
+  Fruits: "/images/mango-pulp.jpg",
 }
 
 function ProductsContent() {
@@ -184,17 +190,6 @@ function ProductsContent() {
             <source src="/videos/video_preview_h264.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="pointer-events-none absolute inset-0 bg-black/35" />
-          <div className="absolute inset-0 flex items-center justify-center px-4">
-            <div className="rounded-2xl border border-white/35 bg-black/35 px-6 py-6 text-center backdrop-blur-sm md:px-10 md:py-8">
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
-                {selectedCategory === "All" ? t("header.allProducts") : tc(selectedCategory)}
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm md:text-base text-white/90">
-                {t("products.heroSubtitle")}
-              </p>
-            </div>
-          </div>
         </section>
         <div className="container mx-auto px-4 py-8" data-scroll-animate>
         {/* Page Header */}

@@ -114,12 +114,12 @@ export default function HomePage() {
         />
         
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-background" data-scroll-animate>
+        <section className="py-16 bg-primary/10" data-scroll-animate>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-foreground text-center mb-12" data-scroll-animate>{t("home.why.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6" data-scroll-animate>
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="text-center p-6 rounded-2xl border border-primary/20 bg-background/80" data-scroll-animate>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
                   <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -129,8 +129,8 @@ export default function HomePage() {
                   {t("home.why.quality.desc")}
                 </p>
               </div>
-              <div className="text-center p-6" data-scroll-animate>
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="text-center p-6 rounded-2xl border border-primary/20 bg-background/80" data-scroll-animate>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
                   <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -140,8 +140,8 @@ export default function HomePage() {
                   {t("home.why.delivery.desc")}
                 </p>
               </div>
-              <div className="text-center p-6" data-scroll-animate>
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="text-center p-6 rounded-2xl border border-primary/20 bg-background/80" data-scroll-animate>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
                   <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>

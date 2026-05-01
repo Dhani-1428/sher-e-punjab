@@ -93,7 +93,7 @@ export function CategorySection() {
           {categories.map((category, index) => (
             <Link
               key={category.name}
-              href={`/products?category=${encodeURIComponent(category.name)}`}
+              href={category.name === "Fruits" ? "/fruits" : `/products?category=${encodeURIComponent(category.name)}`}
               className="group min-w-[120px] text-center animate-in fade-in slide-in-from-bottom-4 duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
               data-scroll-animate

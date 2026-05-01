@@ -264,7 +264,7 @@ export function Header() {
                 onMouseEnter={() => setActiveCategory(category.title)}
               >
                 <Link
-                  href={`/products?category=${encodeURIComponent(category.title)}`}
+                  href={category.title === "Fruits" ? "/fruits" : `/products?category=${encodeURIComponent(category.title)}`}
                   className={`flex items-center gap-1 px-3 py-3 text-sm font-medium transition-colors ${
                     activeCategory === category.title
                       ? "text-primary bg-primary/10"
@@ -281,7 +281,7 @@ export function Header() {
                 {activeCategory === category.title && (
                   <div className="absolute top-full left-0 z-50 flex min-w-[220px] max-w-[min(calc(100vw-2rem),20rem)] flex-col overflow-hidden rounded-md border bg-card shadow-lg animate-in fade-in-0 zoom-in-95 duration-200">
                     <Link
-                      href={`/products?category=${encodeURIComponent(category.title)}`}
+                      href={category.title === "Fruits" ? "/fruits" : `/products?category=${encodeURIComponent(category.title)}`}
                       className="block shrink-0 px-4 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
                     >
                       {t("header.viewAll")} {tc(category.title)}
@@ -332,7 +332,7 @@ export function Header() {
               <div key={category.title}>
                 <div className="flex items-center gap-1 w-full">
                   <Link
-                    href={`/products?category=${encodeURIComponent(category.title)}`}
+                    href={category.title === "Fruits" ? "/fruits" : `/products?category=${encodeURIComponent(category.title)}`}
                     className="flex-1 py-2 text-sm font-medium hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -354,7 +354,7 @@ export function Header() {
                 {mobileExpandedCategory === category.title && (
                   <div className="flex flex-col pl-4">
                     <Link
-                      href={`/products?category=${encodeURIComponent(category.title)}`}
+                      href={category.title === "Fruits" ? "/fruits" : `/products?category=${encodeURIComponent(category.title)}`}
                       className="block shrink-0 py-2 text-sm text-primary hover:underline"
                       onClick={() => setIsMenuOpen(false)}
                     >
