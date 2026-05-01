@@ -495,6 +495,82 @@ const defaultProducts: Product[] = [
     inStock: true,
     unit: "kg"
   },
+  // Additional items from navbar dropdowns
+  { id: "41", name: "Toor Dal", category: "Dal & Pulses", pricePerKg: 6.99, image: "/images/toor-dal.jpg", description: "Classic split pigeon pea for everyday dal.", inStock: true, unit: "kg" },
+  { id: "42", name: "Arhar Dal", category: "Dal & Pulses", pricePerKg: 6.99, image: "/images/toor-dal.jpg", description: "Arhar dal with rich flavor and smooth texture.", inStock: true, unit: "kg" },
+  { id: "43", name: "Matar Dal", category: "Dal & Pulses", pricePerKg: 5.39, image: "/images/toor-dal.jpg", description: "Dry white peas used in comforting curries.", inStock: true, unit: "kg" },
+  { id: "44", name: "Lobia", category: "Dal & Pulses", pricePerKg: 5.99, image: "/images/toor-dal.jpg", description: "Black-eyed beans for light and hearty gravies.", inStock: true, unit: "kg" },
+  { id: "45", name: "Matki", category: "Dal & Pulses", pricePerKg: 6.49, image: "/images/moong-dal.jpg", description: "Moth beans ideal for sprouting and usal recipes.", inStock: true, unit: "kg" },
+  { id: "46", name: "Val Dal", category: "Dal & Pulses", pricePerKg: 8.29, image: "/images/toor-dal.jpg", description: "Field bean split used in Gujarati dishes.", inStock: true, unit: "kg" },
+  { id: "47", name: "Rongi", category: "Dal & Pulses", pricePerKg: 5.69, image: "/images/toor-dal.jpg", description: "Black-eyed peas for curries and stews.", inStock: true, unit: "kg" },
+  { id: "48", name: "Dry Peas", category: "Dal & Pulses", pricePerKg: 4.99, image: "/images/toor-dal.jpg", description: "Dried peas suitable for chaat and curries.", inStock: true, unit: "kg" },
+
+  { id: "49", name: "Sona Masoori", category: "Rice", pricePerKg: 7.99, image: "/images/basmati.jpg", description: "Lightweight rice perfect for daily meals.", inStock: true, unit: "kg" },
+  { id: "50", name: "Ponni Rice", category: "Rice", pricePerKg: 7.49, image: "/images/basmati.jpg", description: "Popular South Indian rice with soft texture.", inStock: true, unit: "kg" },
+  { id: "51", name: "Jeera Rice", category: "Rice", pricePerKg: 8.49, image: "/images/basmati.jpg", description: "Aromatic rice ideal for jeera rice preparations.", inStock: true, unit: "kg" },
+  { id: "52", name: "Brown Rice", category: "Rice", pricePerKg: 9.49, image: "/images/basmati.jpg", description: "Whole grain brown rice rich in fiber.", inStock: true, unit: "kg" },
+  { id: "53", name: "Idli Rice", category: "Rice", pricePerKg: 7.29, image: "/images/basmati.jpg", description: "Rice variety suitable for idli and dosa batter.", inStock: true, unit: "kg" },
+
+  { id: "54", name: "Mustard Seeds", category: "Spices", pricePerKg: 12.49, image: "/images/cumin.jpg", description: "Tiny pungent seeds for tempering and pickles.", inStock: true, unit: "kg" },
+  { id: "55", name: "Fenugreek", category: "Spices", pricePerKg: 11.49, image: "/images/cumin.jpg", description: "Fenugreek seeds with deep bitter-sweet aroma.", inStock: true, unit: "kg" },
+
+  { id: "56", name: "Maida", category: "Flour", pricePerKg: 3.79, image: "/images/atta.jpg", description: "Refined flour used in breads and snacks.", inStock: true, unit: "kg" },
+  { id: "57", name: "Rava/Sooji", category: "Flour", pricePerKg: 4.29, image: "/images/atta.jpg", description: "Semolina for upma, halwa, and savory recipes.", inStock: true, unit: "kg" },
+  { id: "58", name: "Rice Flour", category: "Flour", pricePerKg: 4.59, image: "/images/atta.jpg", description: "Fine rice flour for batters and snacks.", inStock: true, unit: "kg" },
+  { id: "59", name: "Ragi Flour", category: "Flour", pricePerKg: 5.49, image: "/images/atta.jpg", description: "Finger millet flour for healthy meals.", inStock: true, unit: "kg" },
+
+  { id: "60", name: "Bhujia", category: "Snacks", pricePerKg: 10.49, image: "/images/mixture.jpg", description: "Crispy gram flour noodles with mild spice.", inStock: true, unit: "kg" },
+  { id: "61", name: "Sev", category: "Snacks", pricePerKg: 9.99, image: "/images/mixture.jpg", description: "Crunchy sev for chaat and snack mixes.", inStock: true, unit: "kg" },
+  { id: "62", name: "Chips", category: "Snacks", pricePerKg: 8.99, image: "/images/chakli.jpg", description: "Crispy chips perfect for teatime snacking.", inStock: true, unit: "kg" },
+  { id: "63", name: "Mathri", category: "Snacks", pricePerKg: 10.99, image: "/images/murukku.jpg", description: "Traditional flaky savory crackers.", inStock: true, unit: "kg" },
+
+  { id: "64", name: "Gulab Jamun", category: "Sweets", pricePerKg: 14.99, image: "/images/gulab-jamun.jpg", description: "Soft syrup-soaked festive sweet.", inStock: true, unit: "kg" },
+  { id: "65", name: "Jalebi", category: "Sweets", pricePerKg: 13.99, image: "/images/jalebi.jpg", description: "Crispy golden spirals dipped in syrup.", inStock: true, unit: "kg" },
+  { id: "66", name: "Rasgulla", category: "Sweets", pricePerKg: 16.49, image: "/images/gulab-jamun.jpg", description: "Spongy cottage cheese balls in sugar syrup.", inStock: true, unit: "kg" },
+  { id: "67", name: "Barfi", category: "Sweets", pricePerKg: 17.99, image: "/images/kaju-katli.jpg", description: "Traditional milk-based fudge sweet.", inStock: true, unit: "kg" },
+  { id: "68", name: "Ladoo", category: "Sweets", pricePerKg: 15.99, image: "/images/kaju-katli.jpg", description: "Round festive sweets made with ghee and flour.", inStock: true, unit: "kg" },
+  { id: "69", name: "Halwa Mix", category: "Sweets", pricePerKg: 9.49, image: "/images/jalebi.jpg", description: "Ready mix to prepare rich halwa quickly.", inStock: true, unit: "kg" },
+
+  { id: "70", name: "Masala Chai", category: "Beverages", pricePerKg: 22.99, image: "/images/chai.jpg", description: "Classic Indian spiced tea blend.", inStock: true, unit: "kg" },
+  { id: "71", name: "Green Tea", category: "Beverages", pricePerKg: 19.99, image: "/images/chai.jpg", description: "Refreshing green tea leaves for daily use.", inStock: true, unit: "kg" },
+  { id: "72", name: "Lassi", category: "Beverages", pricePerKg: 7.99, image: "/images/rooh-afza.jpg", description: "Traditional yogurt drink mix.", inStock: true, unit: "bottle" },
+  { id: "73", name: "Sherbet", category: "Beverages", pricePerKg: 10.49, image: "/images/rooh-afza.jpg", description: "Cooling flavored syrup concentrate.", inStock: true, unit: "bottle" },
+  { id: "74", name: "Coffee", category: "Beverages", pricePerKg: 18.49, image: "/images/chai.jpg", description: "Strong aromatic coffee blend.", inStock: true, unit: "kg" },
+
+  { id: "75", name: "Mixed Pickle", category: "Pickles", pricePerKg: 11.99, image: "/images/mango-pickle.jpg", description: "Mixed vegetable pickle in traditional spices.", inStock: true, unit: "kg" },
+  { id: "76", name: "Garlic Pickle", category: "Pickles", pricePerKg: 12.49, image: "/images/lime-pickle.jpg", description: "Spicy garlic pickle with bold flavor.", inStock: true, unit: "kg" },
+  { id: "77", name: "Chilli Pickle", category: "Pickles", pricePerKg: 12.99, image: "/images/mango-pickle.jpg", description: "Hot and tangy chilli pickle.", inStock: true, unit: "kg" },
+  { id: "78", name: "Ginger Pickle", category: "Pickles", pricePerKg: 11.99, image: "/images/lime-pickle.jpg", description: "Zesty ginger pickle for meals and snacks.", inStock: true, unit: "kg" },
+
+  { id: "79", name: "Paneer Masala", category: "Ready to Cook", pricePerKg: 9.49, image: "/images/paneer-masala.jpg", description: "Spice blend for quick paneer curry.", inStock: true, unit: "pack" },
+  { id: "80", name: "Curry Paste", category: "Ready to Cook", pricePerKg: 8.99, image: "/images/paneer-masala.jpg", description: "Ready curry base for fast cooking.", inStock: true, unit: "pack" },
+  { id: "81", name: "Sambar Powder", category: "Ready to Cook", pricePerKg: 10.99, image: "/images/biryani-masala.jpg", description: "Authentic South Indian sambar spice mix.", inStock: true, unit: "kg" },
+  { id: "82", name: "Rasam Powder", category: "Ready to Cook", pricePerKg: 10.49, image: "/images/biryani-masala.jpg", description: "Tangy rasam masala for quick soups.", inStock: true, unit: "kg" },
+  { id: "83", name: "Pav Bhaji Masala", category: "Ready to Cook", pricePerKg: 11.49, image: "/images/biryani-masala.jpg", description: "Signature blend for pav bhaji.", inStock: true, unit: "kg" },
+
+  { id: "84", name: "Fresh Coriander", category: "Vegetables", pricePerKg: 4.99, image: "/images/coriander.jpg", description: "Fresh coriander bunches for garnish.", inStock: true, unit: "kg" },
+  { id: "85", name: "Curry Leaves", category: "Vegetables", pricePerKg: 5.49, image: "/images/coriander.jpg", description: "Aromatic curry leaves for tempering.", inStock: true, unit: "kg" },
+  { id: "86", name: "Green Chillies", category: "Vegetables", pricePerKg: 4.49, image: "/images/chilli.jpg", description: "Fresh green chillies with sharp heat.", inStock: true, unit: "kg" },
+  { id: "87", name: "Ginger", category: "Vegetables", pricePerKg: 4.99, image: "/images/coriander.jpg", description: "Fresh ginger root for cooking and tea.", inStock: true, unit: "kg" },
+  { id: "88", name: "Garlic", category: "Vegetables", pricePerKg: 3.99, image: "/images/coriander.jpg", description: "Flavorful garlic bulbs for daily cooking.", inStock: true, unit: "kg" },
+  { id: "89", name: "Onions", category: "Vegetables", pricePerKg: 2.49, image: "/images/coriander.jpg", description: "Fresh onions essential for Indian recipes.", inStock: true, unit: "kg" },
+  { id: "90", name: "Tomatoes", category: "Vegetables", pricePerKg: 2.99, image: "/images/coriander.jpg", description: "Juicy tomatoes for curries and gravies.", inStock: true, unit: "kg" },
+
+  { id: "91", name: "Alphonso Mango", category: "Fruits", pricePerKg: 9.99, image: "/images/mango-pulp.jpg", description: "Premium Alphonso mangoes with rich aroma.", inStock: true, unit: "kg" },
+  { id: "92", name: "Banana", category: "Fruits", pricePerKg: 2.99, image: "/images/chai.jpg", description: "Fresh ripe bananas for snacks and smoothies.", inStock: true, unit: "kg" },
+  { id: "93", name: "Coconut", category: "Fruits", pricePerKg: 4.49, image: "/images/coriander.jpg", description: "Whole coconuts with fresh sweet water.", inStock: true, unit: "kg" },
+  { id: "94", name: "Papaya", category: "Fruits", pricePerKg: 3.99, image: "/images/jalebi.jpg", description: "Juicy papaya with soft tropical sweetness.", inStock: true, unit: "kg" },
+  { id: "95", name: "Guava", category: "Fruits", pricePerKg: 5.49, image: "/images/kaju-katli.jpg", description: "Fragrant guavas packed with freshness.", inStock: true, unit: "kg" },
+  { id: "96", name: "Pomegranate", category: "Fruits", pricePerKg: 6.99, image: "/images/lime-pickle.jpg", description: "Ruby-red pomegranates with juicy seeds.", inStock: true, unit: "kg" },
+  { id: "97", name: "Chikoo", category: "Fruits", pricePerKg: 4.79, image: "/images/biryani-masala.jpg", description: "Traditional chikoo fruit with malty sweetness.", inStock: true, unit: "kg" },
+
+  { id: "98", name: "Paneer", category: "Dairy", pricePerKg: 12.99, image: "/images/paneer-masala.jpg", description: "Fresh paneer cubes for curries and snacks.", inStock: true, unit: "kg" },
+  { id: "99", name: "Ghee", category: "Dairy", pricePerKg: 18.99, image: "/images/kaju-katli.jpg", description: "Pure clarified butter with rich aroma.", inStock: true, unit: "kg" },
+  { id: "100", name: "Curd/Yogurt", category: "Dairy", pricePerKg: 5.49, image: "/images/rooh-afza.jpg", description: "Creamy fresh curd for meals and lassi.", inStock: true, unit: "kg" },
+  { id: "101", name: "Buttermilk", category: "Dairy", pricePerKg: 4.29, image: "/images/rooh-afza.jpg", description: "Light salted buttermilk for daily refreshment.", inStock: true, unit: "bottle" },
+  { id: "102", name: "Khoya", category: "Dairy", pricePerKg: 14.99, image: "/images/kaju-katli.jpg", description: "Milk solids for Indian sweets and desserts.", inStock: true, unit: "kg" },
+  { id: "103", name: "Cream", category: "Dairy", pricePerKg: 6.99, image: "/images/rooh-afza.jpg", description: "Fresh cream for gravies and desserts.", inStock: true, unit: "kg" },
+  { id: "104", name: "Milk", category: "Dairy", pricePerKg: 2.19, image: "/images/rooh-afza.jpg", description: "Daily fresh milk for tea and cooking.", inStock: true, unit: "liter" },
 ]
 
 // Default admin user
@@ -551,7 +627,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     
     if (savedProducts) {
       try {
-        setProducts(JSON.parse(savedProducts))
+        const parsedProducts: Product[] = JSON.parse(savedProducts)
+        const existingIds = new Set(parsedProducts.map((p) => p.id))
+        const existingNameCategoryKeys = new Set(
+          parsedProducts.map((p) => `${p.name.toLowerCase()}::${p.category.toLowerCase()}`)
+        )
+
+        // Keep user-managed products while backfilling newly added defaults.
+        const backfilledDefaults = defaultProducts.filter((p) => {
+          const key = `${p.name.toLowerCase()}::${p.category.toLowerCase()}`
+          return !existingIds.has(p.id) && !existingNameCategoryKeys.has(key)
+        })
+
+        setProducts([...parsedProducts, ...backfilledDefaults])
       } catch (e) {
         console.error("Failed to parse products:", e)
       }
