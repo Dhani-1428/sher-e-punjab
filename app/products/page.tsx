@@ -39,20 +39,20 @@ const categories = [
 ]
 
 const categoryHeroImages: Record<string, string> = {
-  All: "https://picsum.photos/id/425/1920/1080",
-  Spices: "https://picsum.photos/id/431/1920/1080",
-  Rice: "https://picsum.photos/id/1074/1920/1080",
-  "Rice & Grains": "https://picsum.photos/id/102/1920/1080",
-  Dairy: "https://picsum.photos/id/490/1920/1080",
-  "Dal & Pulses": "https://picsum.photos/id/766/1920/1080",
-  Snacks: "https://picsum.photos/id/488/1920/1080",
-  Beverages: "https://picsum.photos/id/577/1920/1080",
-  Sweets: "https://picsum.photos/id/1084/1920/1080",
-  "Ready to Cook": "https://picsum.photos/id/312/1920/1080",
-  Pickles: "https://picsum.photos/id/824/1920/1080",
-  Flour: "https://picsum.photos/id/839/1920/1080",
-  Vegetables: "https://picsum.photos/id/103/1920/1080",
-  Fruits: "https://picsum.photos/id/1080/1920/1080",
+  All: "/images/mixture.jpg",
+  Spices: "/images/garam-masala.jpg",
+  Rice: "/images/basmati.jpg",
+  "Rice & Grains": "/images/basmati.jpg",
+  Dairy: "/images/kaju-katli.jpg",
+  "Dal & Pulses": "/images/toor-dal.jpg",
+  Snacks: "/images/murukku.jpg",
+  Beverages: "/images/chai.jpg",
+  Sweets: "/images/gulab-jamun.jpg",
+  "Ready to Cook": "/images/paneer-masala.jpg",
+  Pickles: "/images/mango-pickle.jpg",
+  Flour: "/images/atta.jpg",
+  Vegetables: "/images/coriander.jpg",
+  Fruits: "/images/mango-pulp.jpg",
 }
 
 const searchCategoryKeywords: Record<string, string[]> = {

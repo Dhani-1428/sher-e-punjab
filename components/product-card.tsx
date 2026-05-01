@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/select"
 import { type Product, useStore, weightOptions } from "@/lib/store-context"
 import { useI18n } from "@/lib/i18n"
-import { getProductImageByName } from "@/lib/product-images"
 import { ShoppingCart, Zap, Plus, Minus, Eye } from "lucide-react"
 
 interface ProductCardProps {
@@ -31,7 +30,6 @@ export function ProductCard({ product }: ProductCardProps) {
   const { addToCart, calculatePrice, isLoggedIn } = useStore()
   const { t, tc, tp } = useI18n()
   const router = useRouter()
-  const productImage = getProductImageByName(product.name, product.category)
   
   const currentPrice = calculatePrice(product.pricePerKg, selectedWeight)
   
@@ -78,7 +76,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <Link href={`/products/${product.id}`}>
         <div className="relative aspect-square overflow-hidden bg-muted">
           <Image
-            src={productImage}
+            src={product.image}
             alt={tp(product.name)}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"

@@ -9,7 +9,6 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { useStore } from "@/lib/store-context"
 import { useI18n } from "@/lib/i18n"
-import { getProductImageByName } from "@/lib/product-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -79,7 +78,7 @@ export default function CartPage() {
                     {/* Product Image */}
                     <div className="relative w-24 h-24 rounded-md overflow-hidden bg-muted shrink-0">
                       <Image
-                        src={getProductImageByName(item.product.name, item.product.category)}
+                        src={item.product.image}
                         alt={tp(item.product.name)}
                         fill
                         className="object-cover"
