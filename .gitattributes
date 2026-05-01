@@ -1,1 +1,1 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/0_Spices_Market_3840x2160.mp4 filter=lfs diff=lfs merge=lfs -text
