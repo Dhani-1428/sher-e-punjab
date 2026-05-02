@@ -254,9 +254,9 @@ function ProductsContent() {
               <source src="/videos/video_preview_h264.mp4" type="video/mp4" />
             </video>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
-            {/* Covers typical Envato watermark (bottom-right) with store title + tagline */}
-            <div className="absolute bottom-4 right-4 left-4 sm:left-auto md:bottom-8 md:right-8">
-              <div className="ml-auto max-w-md rounded-2xl border border-white/35 bg-background/95 px-5 py-4 text-foreground shadow-2xl backdrop-blur-md md:px-8 md:py-6">
+            {/* Positioned top-left to cover Envato stock watermark */}
+            <div className="absolute left-3 top-3 z-10 w-[calc(100%-1.5rem)] max-w-lg sm:left-5 sm:top-5 md:left-8 md:top-8 md:w-auto md:max-w-xl">
+              <div className="rounded-2xl border border-white/35 bg-background px-5 py-4 text-foreground shadow-2xl backdrop-blur-md md:px-8 md:py-6">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("header.tagline")}</p>
                 <h1 className="mt-1 text-2xl font-bold tracking-tight text-foreground md:text-4xl">{heroTitle}</h1>
                 <p className="mt-2 text-sm text-muted-foreground md:text-base">{t("products.heroSubtitle")}</p>
